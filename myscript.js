@@ -2,6 +2,7 @@
 let gridBox
 let container
 let button = document.getElementById('button');
+let header = document.querySelector('h1');
 
 // Initial input
 window.onload = newGrid
@@ -35,16 +36,22 @@ function insertGrid(size = 16) {
            container.appendChild(gridBox)
            gridBox.style.cssText = `grid-column: ${i}/ span 1; grid-row: ${j}/ span 1; border: 1px solid black;`
            gridBox.classList.add('gridBox'); 
-           gridBox.addEventListener('mouseover', changeColor)
+           gridBox.addEventListener('mouseover', mouseOver);
+           gridBox.addEventListener('mouseout', mouseLeave);
         }    
     } 
 }
 
-//Change colour
-function changeColor(e) {
-    const randomR = Math.floor(Math.random() * 256);
-    const randomG = Math.floor(Math.random() * 256);
-    const randomB = Math.floor(Math.random() * 256);
-    e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
-    document.body.style.backgroundColor = "rgb("+e.offsetX+",50, "+e.offsetY+")";
+// Mouseover    
+    function mouseOver(e) {
+        const randomR = Math.floor(Math.random() * 256);
+        const randomG = Math.floor(Math.random() * 256);
+        const randomB = Math.floor(Math.random() * 256);
+        e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+        document.body.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+        header.style.cssText = "transform: scale(1.3)"
+  }
+
+  function mouseLeave(e) {
+      header.style.cssText = "transform: scale(1)"
   }
