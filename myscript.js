@@ -11,11 +11,11 @@ window.onload = newGrid
 function newGrid() {
     let size = prompt("Pick a number between 1-64")
     if (size < 0 || size > 64 || !size)  {
-    alert("Pick a proper number, you cretin");
-    return;
+    alert("THAT\'S NOT WHAT I TOLD YOU DO");
+    newGrid();
     } else if (isNaN(size)) {
-        alert("Pick a proper number, you cretin");
-        return;
+        alert("PICK A PROPER NUMBER, YOU CRETIN");
+        newGrid()
     } else insertGrid(size)
 }
 
