@@ -1,0 +1,26 @@
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+ 
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: #f4f4f4;
+ }
+
+ #container {
+     display: grid;
+     height: 800px;
+     width: 800px;
+     border: 1px solid black;
+}
+
+.gridBox {
+    border: 1px solid black;
+}
