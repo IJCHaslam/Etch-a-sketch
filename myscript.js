@@ -9,8 +9,8 @@ window.onload = newGrid
 
 // Check the input is correct
 function newGrid() {
-    let size = prompt("Pick a number between 1-64")
-    if (size < 0 || size > 64 || !size)  {
+    let size = prompt("Pick a number between 1-100")
+    if (size < 0 || size > 100 || !size)  {
     alert("THAT\'S NOT WHAT I TOLD YOU DO");
     newGrid();
     } else if (isNaN(size)) {
