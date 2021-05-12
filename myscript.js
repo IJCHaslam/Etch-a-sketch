@@ -49,7 +49,7 @@ function insertGrid(size = 16) {
         const randomB = Math.floor(Math.random() * 256);
         e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
         document.body.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
-        header.style.cssText = "transform: scale(1.3)"
+        header.style.cssText = `transform: scale(1.3); color: pink`
   }
 
   function mouseLeave(e) {
